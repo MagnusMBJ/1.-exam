@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Website</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/Radarlogo.png" alt="Radar Logo">
+            </a>
+        </div>
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="Del.html">RADAR OPLEVELSER</a>
+                <ul class="dropdown-menu">
+                    <li><a href="oplevelse1.html">JERES OPLEVELSER</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="Stoet.html">STØT RADAR</a>
+                <ul class="dropdown-menu">
+                    <li><a href="stoet1.html">BLIV MEDLEM</a></li>
+                    <li><a href="stoet2.html">SHOP</a></li>
+                    <li><a href="stoet3.html">DONÉR</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="events.html">KOMMENDE EVENTS</a>
+            </li>
+        </ul>
+        <div class="icons">
+            <a href="https://www.instagram.com/radarlive/" target="_blank">
+                <img src="img/Icon1.png" alt="Icon 1">
+            </a>
+            <a href="https://www.facebook.com/radarlive/?locale=da_DK" target="_blank">
+                <img src="img/icon2.png" alt="Icon 2">
+            </a>
+            <a href="https://www.youtube.com/user/radarliverec" target="_blank">
+                <img src="img/icon3.png" alt="Icon 3">
+            </a>
+        </div>
+        <button class="burger-menu">☰</button>
+    </nav>
+    <script src="script.js"></script>
+
+
+    <section class="primary-section">
+        <div class="primary-content">
+            <h1>DEL DIN RADAR-<br>OPLEVELSE OG <span class="highlight-word">VIND</span><br> BILLETTER</h1>
+            <p>Upload dine billeder eller historier fra Radar og deltag i konkurrencen om to billetter til et kommende event.</p>
+            <button class="support-button" onclick="document.getElementById('upload-section').scrollIntoView({ behavior: 'smooth' });">
+                Deltag Nu
+            </button>
+        </div>
+    </section>
+    <section class="competition-section">
+        <div class="comp-container">
+            <div class="left-col">
+                <h2>Sådan deltager du</h2>
+                <ul>
+                    <li>Upload et billede eller skriv en historie fra din oplevelse på Radar.</li>
+                    <li>Alle indsendelser deltager automatisk i lodtrækningen om billetter.</li>
+                    <li>Vinderen annonceres på hjemmesiden og via email (valgfrit).</li>
+                </ul>
+            </div>
+            <div class="right-col">
+                <img src="img/biletter.png" alt="Billetter ikon" />
+            </div>
+        </div>
+
+        <!-- Upload formularen inden for samme sektion -->
+        <div id="upload-section" class="upload-form-container">
+            <h2>Del din Radar-oplevelse</h2>
+            <p>Upload et billede, skriv om din oplevelse og indtast din email (valgfrit), så du kan få besked, hvis du vinder.</p>
+            <form action="/submit" method="post" enctype="multipart/form-data">
+                <label for="image-upload">Upload billede:</label>
+                <input type="file" id="image-upload" name="image" accept="image/*" required>
+        
+                <label for="description">Skriv om din oplevelse:</label>
+                <textarea id="description" name="description" rows="4" placeholder="Fortæl os om din oplevelse..." required></textarea>
+        
+                <label for="email">Email (valgfrit):</label>
+                <input type="email" id="email" name="email" placeholder="Indtast din email">
+        
+                <button type="submit" class="submit-btn">Send mit bidrag</button>
+            </form>
+        </div>
+    </section>
