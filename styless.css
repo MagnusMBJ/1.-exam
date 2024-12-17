@@ -724,7 +724,7 @@ body {
     overflow: hidden;
     margin-top: 50px;
     border: 1px solid #B634FF;
-    border-radius: 10px; /* Optional: Add rounded corners */
+    border-radius: 10px; 
 }
 
 
@@ -873,70 +873,70 @@ body {
 /* Stoet media  */
 @media (max-width: 768px) {
     .stoet-hero-section {
-        flex-direction: column; /* Stack content vertically */
-        padding-top: 15%; /* Reduce padding */
-        left: 0; /* Align content to the left */
-        min-height: auto; /* Adjust height for better fit */
+        flex-direction: column; 
+        padding-top: 15%; 
+        left: 0; 
+        min-height: auto; 
     }
 
     .stoet-hero-content {
-        padding: 2rem; /* Reduce padding */
-        max-width: 100%; /* Allow full-width layout */
+        padding: 2rem; 
+        max-width: 100%; 
     }
 
     .stoet-hero-content h1 {
-        font-size: 2.5rem; /* Adjust font size for better fit */
+        font-size: 2.5rem; 
     }
 
     .stoet-hero-content p {
-        font-size: 1.5rem; /* Reduce paragraph font size */
+        font-size: 1.5rem; 
     }
 
     .stoet-cta-button {
-        padding: 15px 20px; /* Adjust button padding */
-        font-size: 1.8rem; /* Scale button font size */
+        padding: 15px 20px; 
+        font-size: 1.8rem; 
     }
 
     .stoet-hero-slideshow {
-        flex: 0 0 300px; /* Reduce width */
-        height: 250px; /* Adjust height */
-        margin-top: 30px; /* Reduce top margin */
+        flex: 0 0 300px; 
+        height: 250px; 
+        margin-top: 30px; 
         border: 1px solid transparent;
     }
 }
 
 @media (max-width: 480px) {
     .stoet-hero-section {
-        align-items: center; /* Center-align content */
+        align-items: center; 
         position: relative;
         padding-top: 20%;
 
     }
 
     .stoet-hero-content {
-        padding: 1rem; /* Further reduce padding for small screens */
-        text-align: center; /* Center-align text */
+        padding: 1rem; 
+        text-align: center; 
         
     }
 
     .stoet-hero-content h1 {
-        font-size: 2rem; /* Further reduce font size */
+        font-size: 2rem; 
     }
 
     .stoet-hero-content p {
-        font-size: 1.2rem; /* Smaller paragraph font size */
+        font-size: 1.2rem; 
     }
 
     .stoet-cta-button {
-        padding: 10px 15px; /* Compact button size */
-        font-size: 1.5rem; /* Reduce button font size */
+        padding: 10px 15px; 
+        font-size: 1.5rem; 
     }
 
     .stoet-hero-slideshow {
-        width: 100%; /* Make the slideshow responsive to parent width */
-        max-width: 250px; /* Limit max width for smaller screens */
-        height: auto; /* Maintain aspect ratio */
-        margin-top: 20px; /* Add margin above the slideshow */
+        width: 100%; 
+        max-width: 250px; 
+        height: auto; 
+        margin-top: 20px; 
         border: 1px solid transparent;
     }
 }
@@ -968,7 +968,7 @@ body {
     }
        
     .event-main-content h1 {
-        font-size: 5rem; /* Reduce font size for better fit */
+        font-size: 5rem; 
         margin-bottom: 1rem;
     }
 }
@@ -976,9 +976,9 @@ body {
 @media (max-width: 480px) {
     .event-main-section {
         height: auto;
-        background-image: url(img/eventbillede.jpg); /* Use an even smaller-specific image */
-        background-size: contain; /* Adjust background sizing */
-        padding: 1rem; /* Reduce padding for very small screens */
+        background-image: url(img/eventbillede.jpg); 
+        background-size: contain; 
+        padding: 1rem; 
     }
 
     .event-main-content h1 {
@@ -1089,29 +1089,77 @@ body {
 
 @media (max-width: 480px) {
     .event img {
-        height: 120px; /* Further reduce the height for smaller screens */
+        height: 120px; 
     }
 
     .event-name {
-        font-size: 16px; /* Reduce font size */
+        font-size: 16px; 
     }
 
     .event-description {
-        font-size: 12px; /* Smaller text for readability */
+        font-size: 12px; 
     }
 
     .event-main-section {
         overflow-x: hidden;
-        padding: 5px; /* Further reduce padding */
-        text-align: center; /* Center-align content */
+        padding: 5px; 
+        text-align: center; 
     }
 
     .events-grid {
-        grid-template-columns: 1fr; /* Single-column layout for small screens */
-        gap: 5px; /* Reduce spacing between grid items */
+        grid-template-columns: 1fr; 
+        gap: 5px; 
     }
 
     .event {
         margin: 0 auto;
     }
 }
+
+/* Footer Section Styling */
+.site-footer {
+    background-color: #000; /* Black background */
+    color: white; /* Same text color for all */
+    padding: 2rem 1rem;
+    font-family: "Alexandria", sans-serif;
+    line-height: 1.6;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-address,
+.footer-contact{
+    flex: 1 1 300px;
+    min-width: 250px;
+}
+
+.footer-address h3,
+.footer-contact h3 {
+    font-size: 1rem; /* Same text size */
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: white; /* Same color */
+}
+
+.footer-address p,
+.footer-contact p,
+.footer-contact a {
+    font-size: 1rem; /* Same text size */
+    color: white; /* Same color */
+    margin: 0;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+
+
