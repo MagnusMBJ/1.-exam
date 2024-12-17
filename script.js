@@ -39,7 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close burger menu and dropdowns when clicking outside
     document.addEventListener('click', (e) => {
-        if (!menu.contains(e.target) && !burgerMenu.contains(e.target)) {
+        const isDropdownClicked = Array.from(dropdowns).some(dropdown => dropdown.contains(e.target));
+        if (!menu.contains(e.target) && !burgerMenu.contains(e.target) && !isDropdownClicked) {
             menu.classList.remove('active');
             dropdowns.forEach(dropdown => {
                 const dropdownMenu = dropdown.querySelector('.dropdown-menu');

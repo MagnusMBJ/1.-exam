@@ -3,7 +3,7 @@
 }
 body {
     margin: 0;
-    font-family: "Alexandria", sans-serif;
+    font-family:'Montserrat', sans-serif;
     overflow-x: hidden;
     background-color: #221333;
     width: 100%;
@@ -112,30 +112,30 @@ body {
 }
 @media (max-width: 768px) {
     .logo img {
-        height: 50px; /* Smaller logo for phone format */
-        top: 0; /* Align vertically with burger menu */
-        left: 10px; /* Adjust horizontal alignment */
+        height: 50px; 
+        top: 0; 
+        left: 10px; 
     }
     .burger-menu {
         display: block;
         position: relative;
-        right: 10px; /* Align with the logo */
+        right: 10px; 
     }
     .menu {
-        display: none; /* Hide the menu on smaller screens */
-        flex-direction: column; /* Stack menu items vertically */
+        display: none; 
+        flex-direction: column; 
         position: absolute;
-        top: 60px; /* Place below the navbar */
+        top: 60px; 
         right: 0;
         width: 100%;
-        background-color: #000; /* Match navbar background */
+        background-color: #000; 
         padding: 1rem;
         z-index: 1000;
-        border-top: 1px solid #fff; /* Optional: Visual separation */
+        border-top: 1px solid #fff; 
     }
     .menu.active {
-        display: flex; /* Make the menu visible when toggled */
-        background: none;
+        display: flex; 
+        background: #221333;
     }
 
     .dropdown-menu {
@@ -145,11 +145,11 @@ body {
         
     }
     .dropdown.active .dropdown-menu {
-        display: flex; /* Show dropdown items when active */
+        display: flex; 
     }
     .menu a {
-        font-size: 1.5rem; /* Adjust font size for mobile screens */
-        padding: 10px 0; /* Add spacing between menu items */
+        font-size: 1.5rem; 
+        padding: 10px 0; 
     }
     .dropdown-menu li a {
         font-size: 1.5rem;
@@ -180,7 +180,7 @@ body {
 .main-content p {
     font-size: 1.7rem;
     margin-bottom: 2rem;
-    font-weight:100 ;
+    font-weight:300 ;
 }
 
 .cta-button:hover {
@@ -247,7 +247,7 @@ body {
 
 .section-title {
     font-size: 2.5rem; 
-    font-weight: 600; 
+    font-weight: 900; 
     color: #B634FF;
     text-align: center; 
     margin: 1rem 0; 
@@ -386,7 +386,7 @@ body {
 .primary-content p {
     font-size: 1.7rem;
     margin-bottom: 2rem;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .support-button {
@@ -471,6 +471,8 @@ body {
 .left-col h2 {
     font-size: clamp(3rem, 4vw, 5rem);
     margin-bottom: 1rem;
+    font-weight: 900;
+    color: #B634FF;
 }
 
 .left-col ul {
@@ -481,6 +483,7 @@ body {
 .left-col li {
     margin-bottom: 0.5rem;
     font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 500;
 }
 
 .right-col {
@@ -603,7 +606,7 @@ body {
 }
 
 .submit-btn:hover {
-    background-color: #B634FF;
+    background-color: #8A2BE2;
 }
 
 /* media upload del*/
@@ -689,12 +692,14 @@ body {
     font-size: clamp(1.5rem, 3vw, 2.5rem); 
     margin-bottom: 1rem;
     color: #fff;
+    font-weight: 900;
 }
 
 .stoet-hero-content p {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     margin-bottom: 2rem;
     color: #fff;
+    font-weight: 100;
 }
 .button-container {
     text-align: center;
@@ -708,8 +713,6 @@ body {
     border-radius: 100px;
     font-size: clamp(1rem, 2.5vw, 2rem); 
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-   
     text-align: center;
 }
 
@@ -780,6 +783,7 @@ body {
 .stoet-progress-section h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    font-weight: 900;
 }
 
 .stoet-progress-bar-container {
@@ -810,6 +814,7 @@ body {
     font-size: 2rem;
     margin-bottom: 2rem;
     color: #fff;
+    font-weight: 900;
 }
 
 .stoet-donation-options {
@@ -868,7 +873,7 @@ body {
 }
 
 .stoet-donation-button:hover {
-    background-color: #B634FF;
+    background-color: #8A2BE2;
 }
 
 /* Stoet media  */
@@ -976,12 +981,10 @@ body {
 
 @media (max-width: 480px) {
     .event-main-section {
-        height: auto;
+        
         background-image: url(img/eventbillede.jpg); 
-        background-size: contain; 
-        padding: 1rem; 
+        
     }
-
     .event-main-content h1 {
         font-size: 3rem; /* Further reduce font size */
         margin-bottom: 0.5rem;
@@ -1073,10 +1076,6 @@ body {
         font-size: 14px;
     }
 
-    .event-main-section {
-        overflow-x: hidden;
-        padding: 10px;
-    }
 
     .events-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1089,31 +1088,43 @@ body {
 }
 
 @media (max-width: 480px) {
-    .event img {
-        height: 120px; 
-    }
-
-    .event-name {
-        font-size: 16px; 
-    }
-
-    .event-description {
-        font-size: 12px; 
-    }
-
-    .event-main-section {
-        overflow-x: hidden;
-        padding: 5px; 
-        text-align: center; 
-    }
+    
 
     .events-grid {
-        grid-template-columns: 1fr; 
-        gap: 5px; 
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Tiles with consistent width */
+        gap: 20px;
+        margin: 0 auto; /* Center the grid */
+        padding: 0;
+        max-width: 90%; /* Limit overall grid width */
     }
 
     .event {
-        margin: 0 auto;
+        width: 100%; /* Tile fills its grid area */
+        max-width: 250px; /* Consistent width for each tile */
+        margin: 0 auto; /* Center the tiles */
+        box-sizing: border-box; /* Padding stays inside */
+    }
+
+    .event img {
+        height: 120px;
+        width: 100%;
+        object-fit: cover; /* Keep image proportions */
+    }
+
+    .event-info {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .event-name {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .event-description {
+        font-size: 12px;
+        margin-bottom: 5px;
     }
 }
 
@@ -1122,7 +1133,6 @@ body {
     background-color: #000; /* Black background */
     color: white; /* Same text color for all */
     padding: 2rem 1rem;
-    font-family: "Alexandria", sans-serif;
     line-height: 1.6;
 }
 
