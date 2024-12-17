@@ -397,6 +397,7 @@ body {
     border-radius: 100px;
     font-size: 3rem;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .support-button:hover {
