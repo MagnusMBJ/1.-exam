@@ -10,32 +10,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Handle dropdown click behavior
-    dropdowns.forEach(dropdown => {
-        const link = dropdown.querySelector('a');
-        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-
-        let clickCount = 0;
-
-        link.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default navigation
-            clickCount++;
-
-            if (clickCount === 1) {
-                // First click: Show the dropdown menu
-                dropdownMenu.style.display = 'flex';
-
-                // Reset click count after a delay if no second click
-                clearTimeout(clickTimeout);
-                clickTimeout = setTimeout(() => {
-                    clickCount = 0;
-                }, 500);
-            } else if (clickCount === 2) {
-                // Second click: Navigate to the link
-                window.location.href = link.href;
-                clickCount = 0; // Reset click count
-            }
+    if (window.matchMedia("(max-width: 768px)").matches) { // Adjust the max-width as needed for "small screens"
+        const dropdowns = document.querySelectorAll('.dropdown'); // Replace with your actual selector
+        let clickTimeout; // Declare clickTimeout outside to be used across event listeners
+    
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('a');
+            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+    
+            let clickCount = 0;
+    
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default navigation
+                clickCount++;
+    
+                if (clickCount === 1) {
+                    // First click: Show the dropdown menu
+                    dropdownMenu.style.display = 'flex';
+    
+                    // Reset click count after a delay if no second click
+                    clearTimeout(clickTimeout);
+                    clickTimeout = setTimeout(() => {
+                        clickCount = 0;
+                    }, 500);
+                } else if (clickCount === 2) {
+                    // Second click: Navigate to the link
+                    window.location.href = link.href;
+                    clickCount = 0; // Reset click count
+                }
+            });
         });
-    });
+    }
 
     // Close burger menu and dropdowns when clicking outside
     document.addEventListener('click', (e) => {
