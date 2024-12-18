@@ -333,8 +333,8 @@ body {
     max-width: 80%;
 }
 .section-right .logor {
-    max-width: 90%; /* Ensure it doesn't exceed the container width */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 90%; 
+    height: auto; 
     margin: 0 auto;
     display: block;
 }
@@ -706,7 +706,7 @@ body {
 }
 
 .stoet-cta-button {
-    padding: clamp(10px, 2vw, 20px) clamp(15px, 3vw, 30px); /* Dynamic padding */
+    padding: clamp(10px, 2vw, 20px) clamp(15px, 3vw, 30px); 
     background-color: #B634FF;
     color: white;
     border: none;
@@ -1153,17 +1153,17 @@ body {
 
 .footer-address h3,
 .footer-contact h3 {
-    font-size: 1rem; /* Same text size */
+    font-size: 1rem; 
     margin-bottom: 0.5rem;
     font-weight: bold;
-    color: white; /* Same color */
+    color: white; 
 }
 
 .footer-address p,
 .footer-contact p,
 .footer-contact a {
-    font-size: 1rem; /* Same text size */
-    color: white; /* Same color */
+    font-size: 1rem; 
+    color: white; 
     margin: 0;
     text-decoration: none;
 }
